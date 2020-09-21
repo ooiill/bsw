@@ -22,7 +22,7 @@ if [ `cat ${profile} | grep 'alias ${app}-sf-unit' | wc -l | awk '{print $1}'` =
 fi
 
 declare -A aliasList=(
-    ["bin.${app}-bsw"]="${app}-sf-bin bsw:init --force=yes --document-need=no --config-need=no --app=backend --scaffold-path=${project}/vendor/jtleon/bsw-bundle --scaffold-ns=Leon\\\\\\\\BswBundle"
+    ["bin.${app}-bsw"]="${app}-sf-bin bsw:init --force=yes --document-need=no --config-need=no --app=backend --scaffold-path=${project}/vendor/ooiill/bsw-bundle --scaffold-ns=Leon\\\\\\\\BswBundle"
     ["bin.${app}-api"]="${app}-sf-bin bsw:init --force=yes --document-need=no --config-need=no --app=api --scheme-bsw=no --scheme-extra=${project}/src/Module/Scheme"
     ["bin.${app}-web"]="${app}-sf-bin bsw:init --force=yes --document-need=no --config-need=no --app=web --scheme-bsw=no --scheme-extra=${project}/src/Module/Scheme"
     ["bin.${app}-backend"]="${app}-sf-bin bsw:init --force=yes --document-need=no --config-need=no --app=backend --scheme-bsw=no --scheme-extra=${project}/src/Module/Scheme"

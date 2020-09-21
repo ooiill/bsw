@@ -8,7 +8,7 @@ dir="${basic}/../.."
 
 bsw=${dir}/php-vendor/bsw/
 
-echo Update jtleon/bsw-bundle
+echo Update ooiill/bsw-bundle
 (cd ${bsw} && git pull)
 
 sudo chmod a+w -R public/bundles/

@@ -12,6 +12,6 @@ if [ ! -d "${bsw}" ]; then
     exit 104
 fi
 
-vendor=$(cd ${basic}/../vendor/jtleon/bsw-bundle; pwd)
+vendor=$(cd ${basic}/../vendor/ooiill/bsw-bundle; pwd)
 
 rm -rf ${vendor} && ln -s ${bsw} ${vendor}
