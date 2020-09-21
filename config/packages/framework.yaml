@@ -1,0 +1,11 @@
+framework:
+    session:
+        gc_maxlifetime: 86400
+        cookie_lifetime: 86400
+        cookie_secure: auto
+        cookie_samesite: lax
+    csrf_protection: true
+    ide: 'phpstorm://open?file=%%f&line=%%l'
+    secret: '%env(APP_SECRET)%'
+    php_errors:
+        log: true

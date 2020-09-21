@@ -1,0 +1,11 @@
+fos_rest: null
+#fos_rest:
+#    service:
+#        serializer: null
+#    routing_loader:
+#        default_format: json
+#    format_listener:
+#        rules:
+#            - { path: ^/, prefer_extension: true, fallback_format: json, priorities: [json] }
+#    exception:
+#        exception_controller: 'App\Controller\AcmeController::showExceptionAction'

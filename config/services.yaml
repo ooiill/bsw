@@ -1,0 +1,16 @@
+parameters:
+    locale: cn
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+    App\Controller\:
+        resource: ../src/Controller
+        tags:
+            - controller.service_arguments
+    Leon\BswBundle\:
+        resource: '@LeonBswBundle/{Controller,Repository}'
+        public: true

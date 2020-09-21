@@ -1,0 +1,58 @@
+bsw-app-mysql:
+    build: ./mysql
+    privileged: true
+    restart: always
+    ports:
+        - "53306:3306"
+    volumes:
+        - ./mysql/data:/var/lib/mysql
+        - ./mysql/my.cnf:/etc/mysql/my.cnf
+        - ./mysql/logs:/var/log/mysql
+        - /etc/localtime:/etc/localtime:ro
+    environment:
+        - MYSQL_ROOT_PASSWORD=Mys9l!7259
+
+bsw-app-redis:
+    build: ./redis
+    privileged: true
+    restart: always
+    ports:
+        - "56379:6379"
+    volumes:
+        - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+        - ./redis/data:/data
+
+bsw-app-fpm:
+    build: ./php
+    privileged: true
+    restart: always
+    volumes:
+        - ../:/web/app
+        - ../../file:/web/file
+        - ./php/php.ini:/usr/local/etc/php/php.ini
+        - ./php/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.
+        - ./php/fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+        - /etc/localtime:/etc/localtime:ro
+    extra_hosts:
+        - "host:${GODDESS2}"
+    links:
+        - bsw-app-mysql:mysql
+        - bsw-app-redis:redis
+
+bsw-app-nginx:
+    image: nginx:latest
+    privileged: true
+    restart: always
+    ports:
+        - "50080:80"
+        - "50443:443"
+    volumes:
+        - ../:/web/app
+        - ../../file:/web/file
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx/conf.d:/etc/nginx/conf.d
+        - ./nginx/logs:/var/log/nginx
+        - ./nginx/cert/app.crt:/etc/nginx/app.crt
+        - ./nginx/cert/app.key:/etc/nginx/app.key
+    links:
+        - bsw-app-fpm:fpm

@@ -1,0 +1,18 @@
+FROM node:latest
+
+#
+# Workspace
+#
+RUN mkdir /app
+WORKDIR /app
+
+#
+# Install cnpm
+# With taobao registry by argument --registry=https://registry.npm.taobao.org
+#
+RUN npm install -g cnpm
+
+#
+# Any possibility software
+#
+RUN npm install -g grunt-cli

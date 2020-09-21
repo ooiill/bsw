@@ -1,0 +1,59 @@
+
+div.code > div.highlight, div.section > div.highlight-json {
+    padding: 2px 4px 2px 6px;
+    background-color: #f3f6f6;
+    border-left: 6px solid #6ab0de;
+    margin: 20px 0;
+}
+
+.wy-nav-content {
+    max-width: 1000px;
+}
+
+table.docutils {
+    width: 100%;
+}
+
+.show-tips {
+    display: inline-block;
+    margin: 2px;
+    font-size: 90%;
+    line-height: normal;
+    background: #fdefdf;
+    color: #0a0909b5;
+    border-top: solid 3px #fdac86;
+    padding: 4px 6px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.show-tips-hidden {
+    display: none;
+}
+
+div.rst-content img {
+    display: block;
+    width: 36%;
+    margin: 50px auto !important;
+    opacity: .6;
+}
+
+p {
+    font-size: 14px;
+}
+
+.highlight, .highlight-json {
+    background: none;
+    border-radius: 4px;
+}
+
+.highlight > pre, .highlight-json > pre {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    opacity: .6;
+}
+
+.tippy-popper p {
+    margin-bottom: unset;
+}
