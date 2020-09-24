@@ -19,7 +19,7 @@
         "ext-zlib": "*",
         "ext-libxml": "*",
         "ext-simplexml": "*",
-        "ooiill/bsw-bundle": "^0.1",
+        "ooiill/bsw-bundle": "^1.5",
         "ocramius/proxy-manager": "2.3.1",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.3.*",
