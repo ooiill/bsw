@@ -4,7 +4,7 @@
 1. 克隆项目。
 
     ```bash
-    git clone https://github.com/ecccho/oil.git bsw-app
+    git clone https://github.com/ooiill/bsw.git bsw-app
     ```
 
     > 若果你还没有安装 `docker` 和 `docker-compose` 软件，请先安装软件。

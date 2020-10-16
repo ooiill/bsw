@@ -67,7 +67,7 @@ app=${app}
 type=${type}
 env=${env-dev}
 port=${port-$[$RANDOM%50000+20000]}
-git=${git-https://github.com/ecccho/oil.git}
+git=${git-https://github.com/ooiill/bsw.git}
 npm=${npm-yes}
 mode=${mode-create}
 www=${www-app}
@@ -101,7 +101,7 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--type"           "\t"  "\t\t\t[*] 项目类型 [backend|web|api]"
     color 32 "--env"            "\t"  "\t\t\t[ ] 项目环境 [dev|prod] [default:dev]"
     color 32 "--port"           "\t"  "\t\t\t[ ] 服务默认端口数+port, 保持默认端口请设为 0 [default:random(20000,50000)]"
-    color 32 "--git"            "\t"  "\t\t\t[ ] 项目 git 地址 [default:https://github.com/ecccho/oil.git]"
+    color 32 "--git"            "\t"  "\t\t\t[ ] 项目 git 地址 [default:https://github.com/ooiill/bsw.git]"
     color 32 "--npm"            "\t"  "\t\t\t[ ] 是否需要执行 npm install [default:yes]"
     color 32 "--install"        "\t"  "\t\t[-] 标记为 install 模式, 未携带该参数默认为 create 模式"
     color 32 "--www"            "\t"  "\t\t\t[ ] 项目www [default:app]" "" "\n"
