@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# sudo curl -L "https://raw.githubusercontent.com/ecccho/oil/master/install/bsw.sh" -o /usr/local/bin/bsw && sudo chmod a+x /usr/local/bin/bsw
+# sudo curl -L "https://raw.githubusercontent.com/ooiill/bsw/master/install/bsw.sh" -o /usr/local/bin/bsw && sudo chmod a+x /usr/local/bin/bsw
 
 while [[ "${1}" ]]
 do
