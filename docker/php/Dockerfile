@@ -46,7 +46,11 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     wget \
     unzip \
-    zip
+    zip \
+    sshpass \
+    net-tools \
+    telnet \
+    procps
 
 #
 # Install sphinx-document
