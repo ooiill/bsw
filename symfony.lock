@@ -9,13 +9,13 @@
         "version": "v2.4.1"
     },
     "aws/aws-sdk-php": {
-        "version": "3.158.7"
+        "version": "3.163.2"
     },
     "bacon/bacon-qr-code": {
-        "version": "2.0.2"
+        "version": "2.0.3"
     },
     "beberlei/assert": {
-        "version": "v3.2.7"
+        "version": "v3.3.0"
     },
     "bshaffer/oauth2-server-php": {
         "version": "v1.11.1"
@@ -60,7 +60,7 @@
         "version": "2.13.3"
     },
     "doctrine/dbal": {
-        "version": "2.11.1"
+        "version": "2.12.1"
     },
     "doctrine/doctrine-bundle": {
         "version": "2.0",
@@ -68,7 +68,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "2.0",
-            "ref": "a9f2463b9f73efe74482f831f03a204a41328555"
+            "ref": "368794356c1fb634e58b38ad2addb36933f2e73e"
         },
         "files": [
             "config/packages/doctrine.yaml",
@@ -97,7 +97,7 @@
         "version": "1.4.3"
     },
     "doctrine/instantiator": {
-        "version": "1.3.1"
+        "version": "1.4.0"
     },
     "doctrine/lexer": {
         "version": "1.2.1"
@@ -112,13 +112,13 @@
         "version": "1.3.8"
     },
     "doctrine/reflection": {
-        "version": "1.2.1"
+        "version": "1.2.2"
     },
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
     "egulias/email-validator": {
-        "version": "2.1.22"
+        "version": "2.1.24"
     },
     "endroid/qr-code": {
         "version": "3.7.7"
@@ -147,8 +147,14 @@
     "gregwar/captcha": {
         "version": "v1.1.8"
     },
+    "guzzlehttp/command": {
+        "version": "1.0.0"
+    },
     "guzzlehttp/guzzle": {
-        "version": "7.2.0"
+        "version": "6.5.5"
+    },
+    "guzzlehttp/guzzle-services": {
+        "version": "1.1.3"
     },
     "guzzlehttp/promises": {
         "version": "1.4.0"
@@ -160,16 +166,16 @@
         "version": "3.0.0"
     },
     "illuminate/collections": {
-        "version": "v8.10.0"
+        "version": "v8.15.0"
     },
     "illuminate/contracts": {
-        "version": "v8.10.0"
+        "version": "v8.15.0"
     },
     "illuminate/macroable": {
-        "version": "v8.10.0"
+        "version": "v8.15.0"
     },
     "illuminate/support": {
-        "version": "v8.10.0"
+        "version": "v8.15.0"
     },
     "intervention/image": {
         "version": "2.5.1"
@@ -241,13 +247,13 @@
         "version": "2.0.0"
     },
     "markrogoyski/math-php": {
-        "version": "v1.5.0"
+        "version": "v1.7.0"
     },
     "maxmind-db/reader": {
         "version": "v1.8.0"
     },
     "maxmind/web-service-common": {
-        "version": "v0.8.0"
+        "version": "v0.8.1"
     },
     "mexitek/phpcolors": {
         "version": "v0.4"
@@ -259,10 +265,10 @@
         "version": "2.6.0"
     },
     "myclabs/php-enum": {
-        "version": "1.7.6"
+        "version": "1.7.7"
     },
     "nesbot/carbon": {
-        "version": "2.41.3"
+        "version": "2.41.5"
     },
     "nikic/php-parser": {
         "version": "v4.10.2"
@@ -283,13 +289,13 @@
         "version": "2.3.1"
     },
     "ooiill/bsw-bundle": {
-        "version": "1.5.1"
+        "version": "1.5.10"
     },
     "overtrue/socialite": {
-        "version": "2.0.19"
+        "version": "2.0.22"
     },
     "overtrue/wechat": {
-        "version": "4.3.1"
+        "version": "4.3.2"
     },
     "paragonie/constant_time_encoding": {
         "version": "v2.3.0"
@@ -307,7 +313,7 @@
         "version": "2.2.0"
     },
     "php-http/message": {
-        "version": "1.9.1"
+        "version": "1.10.0"
     },
     "php-http/message-factory": {
         "version": "v1.0.2"
@@ -371,6 +377,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "qcloud/cos-sdk-v5": {
+        "version": "v2.1.1"
     },
     "qcloudsms/qcloudsms_php": {
         "version": "v0.1.4"
@@ -455,7 +464,7 @@
         ]
     },
     "symfony/debug-pack": {
-        "version": "v1.0.8"
+        "version": "v1.0.9"
     },
     "symfony/dependency-injection": {
         "version": "v4.3.11"
@@ -505,7 +514,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "4.2",
-            "ref": "dfcb4a2fbbf3861277354784e60dea1c0d4d9f84"
+            "ref": "5c0a3ccb7b710c6a2328bfaacd416bd4c40f2030"
         },
         "files": [
             "config/bootstrap.php",
@@ -600,25 +609,25 @@
         ]
     },
     "symfony/polyfill-intl-icu": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-intl-idn": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-intl-normalizer": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-mbstring": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-php72": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-php73": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/polyfill-php80": {
-        "version": "v1.18.1"
+        "version": "v1.20.0"
     },
     "symfony/process": {
         "version": "v4.3.11"
@@ -668,7 +677,7 @@
         "version": "v4.3.11"
     },
     "symfony/serializer-pack": {
-        "version": "v1.0.3"
+        "version": "v1.0.4"
     },
     "symfony/service-contracts": {
         "version": "v1.1.9"
@@ -694,7 +703,7 @@
         "version": "v4.3.11"
     },
     "symfony/test-pack": {
-        "version": "v1.0.6"
+        "version": "v1.0.7"
     },
     "symfony/translation": {
         "version": "3.3",
@@ -731,7 +740,7 @@
         ]
     },
     "symfony/twig-pack": {
-        "version": "v1.0.0"
+        "version": "v1.0.1"
     },
     "symfony/validator": {
         "version": "4.3",
@@ -801,13 +810,13 @@
         "version": "v4.3.11"
     },
     "twig/extra-bundle": {
-        "version": "v3.0.5"
+        "version": "v3.1.1"
     },
     "twig/twig": {
-        "version": "v2.13.1"
+        "version": "v2.14.1"
     },
     "voku/portable-ascii": {
-        "version": "1.5.3"
+        "version": "1.5.6"
     },
     "webmozart/assert": {
         "version": "1.9.1"
