@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bcb1d86b50cf758c51f8637033de176",
+    "content-hash": "20850bd422a5fdf138a2c262a680cdf6",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -483,12 +483,12 @@
             "version": "v1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/clue/php-stream-filter.git",
+                "url": "https://github.com/clue/stream-filter.git",
                 "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/php-stream-filter/zipball/aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
+                "url": "https://api.github.com/repos/clue/stream-filter/zipball/aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
                 "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
                 "shasum": ""
             },
@@ -5061,16 +5061,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "1.5.11",
+            "version": "1.5.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "77af767e1cdb0e14bcafe21769cff03d68bf6796"
+                "reference": "fdb00b2f054f88ce1462462565a08c07ec6ab87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/77af767e1cdb0e14bcafe21769cff03d68bf6796",
-                "reference": "77af767e1cdb0e14bcafe21769cff03d68bf6796",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/fdb00b2f054f88ce1462462565a08c07ec6ab87f",
+                "reference": "fdb00b2f054f88ce1462462565a08c07ec6ab87f",
                 "shasum": ""
             },
             "require": {
@@ -5166,7 +5166,7 @@
                 "symfony",
                 "web"
             ],
-            "time": "2020-11-22T09:08:31+00:00"
+            "time": "2021-02-03T06:04:58+00:00"
         },
         {
             "name": "overtrue/socialite",
@@ -5233,12 +5233,12 @@
             "version": "4.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/overtrue/wechat.git",
+                "url": "https://github.com/w7corp/easywechat.git",
                 "reference": "093a3bc059cfaea00d62e041c6b36a695324aba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/093a3bc059cfaea00d62e041c6b36a695324aba4",
+                "url": "https://api.github.com/repos/w7corp/easywechat/zipball/093a3bc059cfaea00d62e041c6b36a695324aba4",
                 "reference": "093a3bc059cfaea00d62e041c6b36a695324aba4",
                 "shasum": ""
             },
@@ -11790,12 +11790,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -12761,14 +12761,14 @@
         "ext-gd": "*",
         "ext-iconv": "*",
         "ext-json": "*",
+        "ext-libxml": "*",
         "ext-mcrypt": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "ext-zip": "*",
         "ext-redis": "*",
-        "ext-zlib": "*",
-        "ext-libxml": "*",
-        "ext-simplexml": "*"
+        "ext-simplexml": "*",
+        "ext-zip": "*",
+        "ext-zlib": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
