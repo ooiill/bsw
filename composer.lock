@@ -5061,16 +5061,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "1.5.40",
+            "version": "1.5.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "fdb00b2f054f88ce1462462565a08c07ec6ab87f"
+                "reference": "404d8ccb6a6b09462d44d0304d8bf11ce39285d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/fdb00b2f054f88ce1462462565a08c07ec6ab87f",
-                "reference": "fdb00b2f054f88ce1462462565a08c07ec6ab87f",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/404d8ccb6a6b09462d44d0304d8bf11ce39285d9",
+                "reference": "404d8ccb6a6b09462d44d0304d8bf11ce39285d9",
                 "shasum": ""
             },
             "require": {
@@ -5166,7 +5166,7 @@
                 "symfony",
                 "web"
             ],
-            "time": "2021-02-03T06:04:58+00:00"
+            "time": "2021-02-19T05:59:57+00:00"
         },
         {
             "name": "overtrue/socialite",
