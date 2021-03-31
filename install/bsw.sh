@@ -258,8 +258,8 @@ fi
 if [[ "${mode}" == "create" ]]; then
 
     eval "${app}-sf-bin doctrine:database:create"
-    eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no"
-    eval "bin.${app}-${type} --project=${app}"
+    eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --project=${app}"
+    eval "bin.${app}-${type}"
     eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
     rm -rf .git
 
