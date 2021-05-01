@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20850bd422a5fdf138a2c262a680cdf6",
+    "content-hash": "100ab732fb6bacdba00147ceffb9ac30",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -5061,16 +5061,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "1.5.57",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "dbd0853994de3e55ec524cb06eefd24a27926531"
+                "reference": "297a9433ba742aaa283a7c88352a6b85b3c1f863"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/dbd0853994de3e55ec524cb06eefd24a27926531",
-                "reference": "dbd0853994de3e55ec524cb06eefd24a27926531",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/297a9433ba742aaa283a7c88352a6b85b3c1f863",
+                "reference": "297a9433ba742aaa283a7c88352a6b85b3c1f863",
                 "shasum": ""
             },
             "require": {
@@ -5166,7 +5166,7 @@
                 "symfony",
                 "web"
             ],
-            "time": "2021-04-01T07:29:34+00:00"
+            "time": "2021-05-01T03:53:28+00:00"
         },
         {
             "name": "overtrue/socialite",
