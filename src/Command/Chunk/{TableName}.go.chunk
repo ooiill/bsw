@@ -1,0 +1,14 @@
+package entity
+
+import (
+    {ImportPkg}
+)
+
+type {TableNameCamel}Entity struct {
+    {TableStruct}
+    MySQLTable
+}
+
+func (t *{TableNameCamel}Entity) TableName() string {
+    return "{TableName}"
+}

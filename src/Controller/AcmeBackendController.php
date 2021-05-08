@@ -23,6 +23,20 @@ class AcmeBackendController extends BswBackendController
     protected $plaintextSensitive = true;
 
     /**
+     * bootstrap
+     */
+    protected function bootstrap()
+    {
+        parent::bootstrap();
+
+        $app = md5($this->cnf->app_name);
+        $this->appendSrcJsWithKey($app, 'diy:app');
+        $this->appendSrcCssWithKey($app, 'diy:app');
+        $this->appendSrcJsWithKey('fancy-box', Abs::JS_FANCY_BOX);
+        $this->appendSrcCssWithKey('fancy-box', Abs::CSS_FANCY_BOX);
+    }
+
+    /**
      * @param array $args
      *
      * @return array
@@ -152,5 +166,48 @@ class AcmeBackendController extends BswBackendController
         }
 
         return null;
+    }
+
+    /**
+     * Upload options handler
+     *
+     * @param string $flag
+     * @param array  $options
+     *
+     * @return array
+     */
+    public function uploadOptionsHandler(string $flag, array $options): array
+    {
+        $options = parent::uploadOptionsHandler($flag, $options);
+        $imgMime = self::mergeMimeMaps(self::$imgSimpleMap);
+
+        $appOptions = [
+            'icon'  => array_merge(
+                [
+                    'maxSize'        => 128,
+                    'picSizes'       => [[100, 1200], [100, 1200]],
+                    'nonExistsForce' => true,
+                ],
+                $imgMime
+            ),
+            'cover' => array_merge(
+                [
+                    'maxSize'        => 256,
+                    'picSizes'       => [[300, 2000], [300, 2000]],
+                    'nonExistsForce' => true,
+                ],
+                $imgMime
+            ),
+            'x'     => array_merge(
+                [
+                    'maxSize'        => 300,
+                    'picSizes'       => [[32, 1200], [32, 1200]],
+                    'nonExistsForce' => true,
+                ],
+                $imgMime
+            ),
+        ];
+
+        return array_merge($options, $appOptions[$flag] ?? []);
     }
 }

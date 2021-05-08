@@ -183,11 +183,13 @@ if [[ "${mode}" == "create" ]]; then
         "docker/nginx/conf.d/htpasswd"
         "docker/script/library.sh"
         "docker/dev.yml"
+        "docker/beta.yml"
         "docker/prod.yml"
         "docker/README.md"
         "install/crontab.sh"
         "install/online.upgrade.sh"
         ".env.dev"
+        ".env.beta"
         ".env.prod"
         "README.md"
     )
