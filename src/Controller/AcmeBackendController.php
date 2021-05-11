@@ -32,8 +32,6 @@ class AcmeBackendController extends BswBackendController
         $app = md5($this->cnf->app_name);
         $this->appendSrcJsWithKey($app, 'diy:app');
         $this->appendSrcCssWithKey($app, 'diy:app');
-        $this->appendSrcJsWithKey('fancy-box', Abs::JS_FANCY_BOX);
-        $this->appendSrcCssWithKey('fancy-box', Abs::CSS_FANCY_BOX);
     }
 
     /**
