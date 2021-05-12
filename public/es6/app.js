@@ -1,16 +1,6 @@
 bsw.configure({
-    data: {
-        imgRealtime: {},
-    },
-    method: {
-        previewImageRealtime(event, field) {
-            let that = this;
-            that.uploaderChange(event, field);
-            if (typeof event.file.response !== 'undefined') {
-                that.imgRealtime[field].url = event.file.response.sets.attachment_url;
-            }
-        },
-    },
+    data: {},
+    method: {},
     logic: {
         loginAnimation(v) {
             v.$nextTick(function () {
