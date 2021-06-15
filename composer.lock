@@ -5061,16 +5061,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "2.0.2",
+            "version": "2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "5fc0d8ce564f92406fe40e28ce97844f43f9d827"
+                "reference": "653f7f752343e69b1036f5a9ecd0d42e9b131780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/5fc0d8ce564f92406fe40e28ce97844f43f9d827",
-                "reference": "5fc0d8ce564f92406fe40e28ce97844f43f9d827",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/653f7f752343e69b1036f5a9ecd0d42e9b131780",
+                "reference": "653f7f752343e69b1036f5a9ecd0d42e9b131780",
                 "shasum": ""
             },
             "require": {
@@ -5166,7 +5166,7 @@
                 "symfony",
                 "web"
             ],
-            "time": "2021-05-12T06:57:24+00:00"
+            "time": "2021-06-11T09:24:17+00:00"
         },
         {
             "name": "overtrue/socialite",
@@ -8826,6 +8826,7 @@
                 "symfony",
                 "words"
             ],
+            "abandoned": "use `EnglishInflector` from the String component instead",
             "time": "2020-01-04T12:24:57+00:00"
         },
         {
