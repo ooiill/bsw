@@ -41,6 +41,10 @@ do
             host="${2}"
             shift 2
             ;;
+        --top)
+            top="${2}"
+            shift 2
+            ;;
         --database)
             database="${2}"
             shift 2
