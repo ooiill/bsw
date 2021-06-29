@@ -1,0 +1,83 @@
+#
+# WARNING you can build with register http://your-id.m.daocloud.io
+#
+
+# database mysql
+bsw-app-mysql:
+    build: ./mysql
+    privileged: true
+    #restart: always
+    ports:
+        # Allow client to access 3306
+        - "53306:3306"
+    volumes:
+        # NOTE: your data will be stored in ./mysql
+        - ./mysql/data:/var/lib/mysql
+        # Configs
+        - ./mysql/my.cnf:/etc/my.cnf
+        # Logs
+        - ./mysql/logs:/var/log/mysql
+        # Date
+        - /etc/localtime:/etc/localtime:ro
+    environment:
+        # Password for root
+        - MYSQL_ROOT_PASSWORD=Mys9l!7259
+
+# database redis
+bsw-app-redis:
+    build: ./redis
+    privileged: true
+    #restart: always
+    ports:
+        - "56379:6379"
+    volumes:
+        - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+        - ./redis/data:/data
+
+# php-fpm
+bsw-app-fpm:
+    build: ./php
+    privileged: true
+    #restart: always
+    volumes:
+        # For source code
+        - ../:/web/app
+        - ../../file:/web/file
+        # Your php.ini
+        - ./php/php.ini:/usr/local/etc/php/php.ini
+        - ./php/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+        - ./php/fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+        # Date
+        - /etc/localtime:/etc/localtime:ro
+    extra_hosts:
+        - "host:${GODDESS2}"
+        - "app.bsw-host.com:${GODDESS2}"
+        # environment:
+        # Set your APP env variables here:
+        # - APP_KEY=
+    links:
+        - bsw-app-mysql:mysql
+        - bsw-app-redis:redis
+
+# web server
+bsw-app-nginx:
+    image: nginx:latest
+    privileged: true
+    #restart: always
+    ports:
+        - "50080:80"
+        - "50443:443"
+    volumes:
+        # For others file
+        - ../:/web/app
+        - ../../file:/web/file
+        # Configs
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx/conf.d:/etc/nginx/conf.d
+        # Logs
+        - ./nginx/logs:/var/log/nginx
+        # Certificates
+        - ./nginx/cert/app.crt:/etc/nginx/app.crt
+        - ./nginx/cert/app.key:/etc/nginx/app.key
+    links:
+        - bsw-app-fpm:fpm
