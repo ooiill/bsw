@@ -45,6 +45,10 @@ do
             database="${2}"
             shift 2
             ;;
+        --database-dsn)
+            databaseDsn="${2}"
+            shift 2
+            ;;
         --ir-admin-phone)
             irAdminPhone="${2}"
             shift 2
@@ -106,6 +110,7 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--install"        "\t"  "\t\t[-] 标记为 install 模式, 未携带该参数默认为 create 模式"
     color 32 "--www"            "\t"  "\t\t\t[ ] 项目www [default:app]" "" "\n"
     color 32 "--host"           "\t"  "\t\t\t[ ] 项目host [default:{args.app}]" "" "\n"
+    color 32 "--database-dsn"   "\t"  "\t\t[ ] 数据库连接，优先级高于参数 --database"
     color 32 "--database"       "\t"  "\t\t[ ] 数据库名称 [default:{args.app}]"
     color 32 "--ir-admin-phone" "\t"  "\t[ ] 后台管理系统账号 [default:17011223344]" "" "\n\n"
     color 32 "--ir-admin-pwd"   "\t"  "\t\t[ ] 后台管理系统账号密码 [default:bsw@2020#BSW]" "" "\n"
@@ -200,7 +205,11 @@ if [[ "${mode}" == "create" ]]; then
         sed -i "s/bsw-host/${host}/g" ${item}
         sed -i "s/bsw-app/${app}/g" ${item}
         sed -i "s/bsw-type/${type}/g" ${item}
-        sed -i "s/bsw-database/${database}/g" ${item}
+        if [[ "${databaseDsn}" == "" ]]; then
+            sed -i "s/DATABASE_URL=mysql://root:Mys9l!7259@mysql:3306/bsw-database/DATABASE_URL=${databaseDsn}/g" ${item}
+        else
+            sed -i "s/bsw-database/${database}/g" ${item}
+        fi
         color 37 "${item}" "\t" ""
 
         for p in 3306 6379 80 443;
