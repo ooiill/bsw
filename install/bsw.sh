@@ -295,10 +295,10 @@ fi
 
 color 44 " You can access service as following " "\n\t"
 if [[ "${httpPort}" != "" ]]; then
-    color 34 "http://${www}.${host}.com:${httpPort}" "\t💥 " ""
+    color 34 "http://${www}.${host}.${top}:${httpPort}" "\t💥 " ""
 fi
 if [[ "${httpsPort}" != "" ]]; then
-    color 34 "https://${www}.${host}.com:${httpsPort}" "\t💥 "
+    color 34 "https://${www}.${host}.${top}:${httpsPort}" "\t💥 "
 fi
 
 # -- eof --
