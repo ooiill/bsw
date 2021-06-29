@@ -71,6 +71,7 @@ git=${git-https://github.com/ooiill/bsw.git}
 npm=${npm-yes}
 mode=${mode-create}
 www=${www-app}
+top=${top-com}
 irAdminPhone=${irAdminPhone-17011223344}
 irAdminPwd=${irAdminPwd-bsw@2020#BSW}
 help=${help-no}
@@ -104,8 +105,9 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--git"            "\t"  "\t\t\t[ ] 项目 git 地址 [default:https://github.com/ooiill/bsw.git]"
     color 32 "--npm"            "\t"  "\t\t\t[ ] 是否需要执行 npm install [default:yes]"
     color 32 "--install"        "\t"  "\t\t[-] 标记为 install 模式, 未携带该参数默认为 create 模式"
-    color 32 "--www"            "\t"  "\t\t\t[ ] 项目www [default:app]" "" "\n"
-    color 32 "--host"           "\t"  "\t\t\t[ ] 项目host [default:{args.app}]" "" "\n"
+    color 32 "--www"            "\t"  "\t\t\t[ ] 三级域名名称 [default:app]" "" "\n"
+    color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称 [default:{args.app}]" "" "\n"
+    color 32 "--top"            "\t"  "\t\t\t[ ] 顶级域名名称 [default:com]" "" "\n"
     color 32 "--database"       "\t"  "\t\t[ ] 数据库名称 [default:{args.app}]"
     color 32 "--ir-admin-phone" "\t"  "\t[ ] 后台管理系统账号 [default:17011223344]" "" "\n\n"
     color 32 "--ir-admin-pwd"   "\t"  "\t\t[ ] 后台管理系统账号密码 [default:bsw@2020#BSW]" "" "\n"
@@ -196,7 +198,7 @@ if [[ "${mode}" == "create" ]]; then
 
     for item in ${nameFiles[*]};
     do
-        sed -i "s/app.bsw-host/${www}.${host}/g" ${item}
+        sed -i "s/app.bsw-host.com/${www}.${host}.${top}/g" ${item}
         sed -i "s/bsw-host/${host}/g" ${item}
         sed -i "s/bsw-app/${app}/g" ${item}
         sed -i "s/bsw-type/${type}/g" ${item}
