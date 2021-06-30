@@ -116,7 +116,7 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--www"            "\t"  "\t\t\t[ ] 三级域名名称 [default:app]" "" "\n"
     color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称 [default:{args.app}]" "" "\n"
     color 32 "--top"            "\t"  "\t\t\t[ ] 顶级域名名称 [default:com]" "" "\n"
-    color 32 "--database-dsn"   "\t"  "\t\t[ ] 数据库连接，优先级高于 --database 参数，格式：用户名:密码@主机:端口/数据库名，root:123456@host:3306/game"
+    color 32 "--database-dsn"   "\t"  "\t\t[ ] 数据库连接，优先级高于 --database 参数，格式如 root:123456@host:3306/game"
     color 32 "--database"       "\t"  "\t\t[ ] 数据库名称 [default:{args.app}]"
     color 32 "--ir-admin-phone" "\t"  "\t[ ] 后台管理系统账号 [default:17011223344]" "" "\n\n"
     color 32 "--ir-admin-pwd"   "\t"  "\t\t[ ] 后台管理系统账号密码 [default:bsw@2020#BSW]" "" "\n"
