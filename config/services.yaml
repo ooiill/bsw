@@ -1,5 +1,53 @@
 parameters:
     locale: cn
+    theme: !php/const Leon\BswBundle\Module\Entity\Abs::CSS_ANT_D_TALK
+    skin: terse
+    terse_cnf:
+        login_container_class: null
+    terse_configure:
+        menuTheme: light
+        autoHeightOffset: 100
+        autoHeightOverOffset: no
+    terse_cover_iframe_args_by_name:
+        new_work_task: {height: 430}
+        adjust_work_progress: {height: 445}
+        note_work_task: {height: 317}
+        transfer_work_task: {height: 240}
+        adjust_work_weight: {height: 272}
+        admin_menu_sort: {height: 240}
+        attachment_diy_upload: {height: 175}
+    terse_module_input_args:
+        Leon\BswBundle\Module\Bsw\Filter\Module:
+            maxShow: 4                          # 展示组件格式
+            maxShowInIframe: 3                  # 同上（弹窗场景）
+            showLabel: false                    # 过滤器不显示标题
+            columnPx: 100                       # 一列代表的宽度
+            size: '%size_default%'              # 持久化表单组件大小
+            sizeInIframe: '%size_default%'      # 同上（弹窗场景）
+            sizeInMobile: '%size_default%'      # 同上（移动端场景）
+        Leon\BswBundle\Module\Bsw\Operate\Module:
+            size: '%size_default%'              # 持久化表单组件大小
+            sizeInIframe: '%size_default%'      # 同上（弹窗场景）
+            sizeInMobile: '%size_default%'      # 同上（移动端场景）
+        Leon\BswBundle\Module\Bsw\Persistence\Module:
+            size: '%size_large%'                # 持久化表单组件大小
+            sizeInIframe: '%size_default%'      # 同上（弹窗场景）
+            sizeInMobile: '%size_default%'      # 同上（移动端场景）
+        Leon\BswBundle\Module\Bsw\Preview\Module:
+            actionBtnGap: 6                     # 操作按钮.间隔
+            paginationClsName: bsw-align-right  # 翻页居右
+            expandRows: false                   # 递归级数据默认展开
+            scrollXOperate: false               # 快捷横向滚动按钮
+            scrollXOperateInIframe: false       # 同上（弹窗场景）
+            scrollXBottomPx: 150                # 离底部距离
+            border: true                        # 表格边框
+            borderInIframe: true                # 同上（弹窗场景）
+            rowClsNameMethod: null              # 递归列表时子级表格行类名
+            size: '%size_default%'              # 表格组件大小
+            sizeInIframe: '%size_default%'      # 同上（弹窗场景）
+            sizeInMobile: '%size_small%'        # 同上（移动端场景）
+        Leon\BswBundle\Module\Bsw\Tabs\Module:
+            clsName: bsw-align-left             # TABS居左
 services:
     _defaults:
         autowire: true

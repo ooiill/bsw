@@ -1,0 +1,41 @@
+{% extends '@LeonBsw/layout/login.html.twig' %}
+
+{% block content %}
+  <div class="login-box">
+    <div class="left" style="background-image: url(/img/bg.jpg);">
+      <div class="logo">
+        <img src="{{ scaffold.cnf.appLogo }}">
+      </div>
+    </div>
+    <div class="right">
+      {% block login %}
+        <p class="bsw-hide" v-init:data-form-items='{needPassword: {{ password is defined ? 'constTrue' : 'constFalse' }}, needGoogleCaptcha: {{ googleCaptcha is defined ? 'constTrue' : 'constFalse' }}}'></p>
+        <div class="{{ ['bsw-login-container', scaffold.cnf.loginContainerClass ?? null]|joinClass }}">
+          <h2>{{ scaffold.cnf.appName }}</h2>
+          <a-form :form="loginForm" class="login-form" @submit="userLogin">
+            <a-form-item>
+              {% include "form/" ~ account.itemName ~ ".html.twig" with {form: account} %}
+            </a-form-item>
+            {% if password is defined %}
+              <a-form-item>
+                {% include "form/" ~ password.itemName ~ ".html.twig" with {form: password} %}
+              </a-form-item>
+            {% endif %}
+            <a-form-item class="bsw-captcha-item">
+              {% include "form/" ~ captcha.itemName ~ ".html.twig" with {form: captcha} %}
+              <img class="bsw-captcha" src="{{ path(scaffold.cnf.routeCaptcha) }}">
+            </a-form-item>
+            {% if googleCaptcha is defined %}
+              <a-form-item>
+                {% include "form/" ~ googleCaptcha.itemName ~ ".html.twig" with {form: googleCaptcha} %}
+              </a-form-item>
+            {% endif %}
+            <a-form-item>
+              {% include "form/" ~ submit.itemName ~ ".html.twig" with {form: submit} %}
+            </a-form-item>
+          </a-form>
+        </div>
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

@@ -4,7 +4,10 @@ namespace App\Controller;
 
 use Leon\BswBundle\Annotation\Entity\Input as I;
 use Leon\BswBundle\Annotation\Entity\Output as O;
+use Leon\BswBundle\Component\Helper;
+use Leon\BswBundle\Module\Bsw as BswModule;
 use Leon\BswBundle\Module\Entity\Abs;
+use Leon\BswBundle\Module\Form\Entity\Button;
 use Leon\BswBundle\Module\Hook\Entity\MoneyStringify;
 use App\Module\Entity\Enum;
 use Leon\BswBundle\Controller\BswBackendController;
@@ -32,6 +35,28 @@ class AcmeBackendController extends BswBackendController
         $app = md5($this->cnf->app_name);
         $this->appendSrcJsWithKey($app, 'diy:app');
         $this->appendSrcCssWithKey($app, 'diy:app');
+
+        $skin = $this->parameter('skin', '');
+        $skin = Helper::underToCamel($skin, false);
+        $skinFn = "skin{$skin}";
+        if (method_exists($this, $skinFn)) {
+            $this->{$skinFn}();
+        }
+    }
+
+    /**
+     * 皮肤 terse
+     */
+    protected function skinTerse()
+    {
+        $this->appendSrcCss('diy:skin-terse', Abs::POS_BOTTOM, 'cw');
+        $this->logicMerge('display', [Abs::MODULE_CRUMBS]);
+        if (strpos($this->route, 'app_bsw_work') === false) {
+            $this->logicMerge('display', [Abs::MODULE_FOOTER]);
+        }
+        if (strpos($this->route, "app_") === 0) {
+            $this->logicMerge('display', [Abs::MODULE_OPERATE]);
+        }
     }
 
     /**
@@ -207,5 +232,46 @@ class AcmeBackendController extends BswBackendController
         ];
 
         return array_merge($options, $appOptions[$flag] ?? []);
+    }
+
+    /**
+     * @return Button
+     */
+    public function fullContentScreenButton(): Button
+    {
+        return (new Button($this->getArgs('screen') ? 'Exit full screen' : 'Enter full screen'))
+            ->setIcon($this->cnf->icon_speech)
+            ->setType(Abs::THEME_ELE_SUCCESS_OL)
+            ->setClick('urlParamsTrigger')
+            ->setArgs(
+                [
+                    'params' => [
+                        'screen'        => 'content',
+                        'bswClsContent' => 'bsw-no-margin bsw-no-border',
+                    ],
+                ]
+            );
+    }
+
+    /**
+     * @param int $height
+     *
+     * @return array
+     */
+    public function fullContentScreen(int $height = 180): array
+    {
+        $screen = $this->getArgs('screen') === 'content';
+        if ($screen) {
+            $this->appendSrcCss('diy:scroll');
+            $this->logicMerge('display', [Abs::MODULE_MENU, Abs::MODULE_HEADER]);
+        }
+
+        return [
+            BswModule\Preview\Module::class => [
+                'scroll'         => $screen ? ['y' => "{var:WH.eleH - {$height}}"] : [],
+                'size'           => $screen ? Abs::SIZE_SMALL : Abs::SIZE_DEFAULT,
+                'paginationShow' => !$screen,
+            ],
+        ];
     }
 }

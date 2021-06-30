@@ -203,6 +203,7 @@ if [[ "${mode}" == "create" ]]; then
     for item in ${nameFiles[*]};
     do
         sed -i "s/app.bsw-host.com/${www}.${host}.${top}/g" ${item}
+        sed -i "s/www.bsw-host.com/www.${host}.${top}/g" ${item}
         sed -i "s/bsw-host/${host}/g" ${item}
         sed -i "s/bsw-app/${app}/g" ${item}
         sed -i "s/bsw-type/${type}/g" ${item}

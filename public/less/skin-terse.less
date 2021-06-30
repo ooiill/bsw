@@ -1,0 +1,355 @@
+/*
+ * Login
+ */
+.bsw-body-login {
+  .ant-spin-container {
+    padding: 0;
+  }
+
+  .login-box {
+    height: 510px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    box-shadow: 0 0 10px #ddd;
+
+    .login-form {
+      margin-top: 30px;
+    }
+
+    .left {
+      width: 400px;
+      height: 510px;
+      background: url(/img/login.jpeg) center 0 no-repeat;
+      background-size: cover;
+      opacity: .9;
+
+      .logo {
+        margin: 30px 0 0 30px;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, .4);
+        text-align: center;
+        line-height: 40px;
+        border-radius: 6px;
+      }
+
+      .logo img {
+        height: 30px;
+      }
+
+      .login-img {
+        text-align: center;
+      }
+
+      .login-img img {
+        width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    .right {
+      background: #ffffff;
+      width: 400px;
+      height: 100%;
+      padding: 84px 58px 0;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(39, 38, 40, .75);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .bsw-login-container {
+    .ant-input-lg,
+    .ant-btn-lg,
+    .bsw-captcha-item .ant-form-item-children > img.bsw-captcha {
+      height: 44px;
+      border-radius: 22px;
+    }
+  }
+}
+
+/*
+ * Acme
+ */
+.ant-layout-sider .logo {
+  margin: 30px 0 10px;
+
+  img {
+    height: 40px;
+  }
+}
+
+
+.ant-layout-sider {
+  // border-top-right-radius: 24px;
+  // border-bottom-right-radius: 24px;
+
+  .logo, .ant-layout-header .logo {
+    background: unset;
+    box-shadow: unset;
+  }
+
+  .logo.menu-collapse {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bsw-operate.top {
+    margin-top: 0;
+  }
+
+  .bsw-body-login .login-box {
+    .left {
+      width: 0;
+    }
+
+    .right {
+      width: 360px;
+      height: 100%;
+      padding: 84px 16px;
+    }
+  }
+}
+
+.ant-layout .ant-layout-header {
+  background: unset;
+  z-index: 999;
+}
+
+span.ant-tag {
+  background: transparent;
+}
+
+.ant-layout-sider ul[role="menu"] > li[role="menuitem"] {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .18) inset;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-select-selection,
+.ant-time-picker-input,
+.ant-select-search--inline .ant-select-search__field {
+  // border-radius: 21px;
+}
+
+.ant-select-selection--multiple .ant-select-selection__rendered {
+  margin-left: 10px;
+}
+
+div.ant-input-number {
+  // border-top-right-radius: 8px;
+  // border-bottom-right-radius: 8px;
+}
+
+textarea.ant-input {
+  // border-radius: 12px 12px 4px 12px;
+}
+
+div.ant-mentions {
+  // border-radius: 12px;
+}
+
+.ant-input-group.ant-input-group-compact {
+  > .ant-calendar-picker:first-child .ant-input,
+  > .ant-cascader-picker:first-child .ant-input,
+  > .ant-mention-wrapper:first-child .ant-mention-editor,
+  > .ant-select-auto-complete:first-child .ant-input,
+  > .ant-select:first-child > .ant-select-selection,
+  > .ant-time-picker:first-child .ant-time-picker-input,
+  > :first-child {
+    // border-top-left-radius: 21px;
+    // border-bottom-left-radius: 21px;
+  }
+}
+
+.ant-input-group.ant-input-group-compact {
+  > .ant-calendar-picker:last-child .ant-input,
+  > .ant-cascader-picker-focused:last-child .ant-input,
+  > .ant-cascader-picker:last-child .ant-input,
+  > .ant-mention-wrapper:last-child .ant-mention-editor,
+  > .ant-select-auto-complete:last-child .ant-input,
+  > .ant-select:last-child > .ant-select-selection,
+  > .ant-time-picker:last-child .ant-time-picker-input,
+  > :last-child {
+    // border-top-right-radius: 21px;
+    // border-bottom-right-radius: 21px;
+  }
+}
+
+.bsw-ck {
+  // border-bottom-left-radius: 12px;
+  // border-bottom-right-radius: 12px;
+  border: 1px solid rgba(232, 237, 250, 1);
+
+  .bsw-ck-toolbar {
+    box-shadow: 0 0 5px rgba(232, 237, 250, .2);
+    border-bottom: 1px solid rgba(232, 237, 250, 1);
+  }
+
+  .ck.ck-toolbar .ck.ck-toolbar__separator {
+    background: rgba(232, 237, 250, 1);
+  }
+
+  .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+    // border-radius: 0 0 12px 12px;
+  }
+}
+
+.chats-filter {
+  margin: 8px 0 20px 0;
+  overflow: auto;
+
+  > div.bsw-operate.top {
+    float: left;
+    margin-bottom: 0;
+    padding: 0 0 8px 0;
+
+    button {
+      margin: 0;
+    }
+  }
+
+  > form.bsw-filter-form {
+    float: right;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    .bsw-filter-item {
+      padding: 0 12px 0 0;
+    }
+
+    .ant-form-item {
+      margin: 0 0 12px;
+    }
+  }
+}
+
+.ant-layout .ant-layout-content {
+  background: #fff;
+  // border-radius: 12px;
+  padding: 24px;
+
+  .bsw-welcome {
+    border: 1px solid #e8edfa;
+  }
+
+  &.iframe {
+    padding: 10px;
+    // border-radius: 8px;
+
+    .bsw-content-persistence {
+      border: none;
+    }
+
+    .chats-filter {
+      margin-top: 20px;
+    }
+  }
+}
+
+div.ant-tabs .ant-tabs-bar {
+  border-bottom: 1px solid #e8edfa;
+}
+
+.bsw-scaffold-document .ant-layout .ant-layout-content {
+  margin: 0;
+  border: none;
+}
+
+dd, h1, h2, h3, h4, h5, h6, legend, p {
+  margin: 0;
+}
+
+.ant-layout .ant-layout-content {
+  margin: 20px 30px;
+  border: 1px solid #e8edfa;
+
+  .bsw-content-persistence {
+    border: none;
+  }
+
+  @media screen and (max-width: 992px) {
+    margin: 0;
+    border: none;
+    padding: 12px;
+  }
+}
+
+.ant-layout, .ant-layout-footer {
+  background: rgba(251, 251, 251, 1);
+}
+
+.ant-layout .ant-layout-header {
+  padding: 0 30px;
+
+  .user-wrapper.right {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0 10px 0 0;
+  }
+}
+
+.mb3 {
+  margin-bottom: 30px;
+}
+
+.ant-input:focus {
+  box-shadow: none;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: 0 none;
+}
+
+.ant-card-body {
+  padding: 36px;
+}
+
+.ant-card {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.02);
+  // border-radius: 10px;
+}
+
+.icon-12 {
+  font-size: 12px;
+}
+
+.ant-table-tbody > tr > td, .ant-table-bordered .ant-table-body > table, .ant-table-bordered .ant-table-fixed-left table, .ant-table-bordered .ant-table-fixed-right table, .ant-table-bordered .ant-table-header > table, .ant-table-bordered .ant-table-tbody > tr > td, .ant-table-bordered .ant-table-thead > tr > th {
+  border-color: rgba(232, 237, 250, 1)
+}
+
+.ant-layout .ant-layout-content .bsw-content {
+  overflow: hidden;
+}
+
+.home-content-class .ant-layout-content {
+  background: 0 none;
+  margin: 5px 50px 20px;
+}
+
+.ant-layout .ant-layout-header .user-wrapper.left {
+  padding: 20px 0;
+}
+
+.ant-breadcrumb {
+  font-size: 16px;
+}

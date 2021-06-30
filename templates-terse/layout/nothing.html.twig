@@ -1,0 +1,8 @@
+{#
+{% block headerMenuTrigger %}{% endblock %}
+#}
+{% block headerMenu %}
+  {% if scaffold.route != scaffold.cnf.routeDefault %}
+    {{ block('crumbs') }}
+  {% endif %}
+{% endblock %}

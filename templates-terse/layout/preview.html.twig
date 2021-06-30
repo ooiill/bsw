@@ -1,0 +1,10 @@
+{% extends '@LeonBsw/layout/preview.html.twig' %}
+
+{% block filter %}
+  {% if operate.buttons is not empty or filter.filter is not empty %}
+    <div class="chats-filter">
+      {{ block('operateTop') }}
+      {{ parent() }}
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,252 @@
+/*
+ * Login
+ */
+.bsw-body-login .ant-spin-container {
+  padding: 0;
+}
+.bsw-body-login .login-box {
+  height: 510px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -60%);
+      transform: translate(-50%, -60%);
+  box-shadow: 0 0 10px #ddd;
+}
+.bsw-body-login .login-box .login-form {
+  margin-top: 30px;
+}
+.bsw-body-login .login-box .left {
+  width: 400px;
+  height: 510px;
+  background: url(/img/login.jpeg) center 0 no-repeat;
+  background-size: cover;
+  opacity: .9;
+}
+.bsw-body-login .login-box .left .logo {
+  margin: 30px 0 0 30px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 6px;
+}
+.bsw-body-login .login-box .left .logo img {
+  height: 30px;
+}
+.bsw-body-login .login-box .left .login-img {
+  text-align: center;
+}
+.bsw-body-login .login-box .left .login-img img {
+  width: 300px;
+  margin: 0 auto;
+}
+.bsw-body-login .login-box .right {
+  background: #ffffff;
+  width: 400px;
+  height: 100%;
+  padding: 84px 58px 0;
+}
+.bsw-body-login .login-box .right h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(39, 38, 40, 0.75);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.bsw-body-login .bsw-login-container .ant-input-lg,
+.bsw-body-login .bsw-login-container .ant-btn-lg,
+.bsw-body-login .bsw-login-container .bsw-captcha-item .ant-form-item-children > img.bsw-captcha {
+  height: 44px;
+  border-radius: 22px;
+}
+/*
+ * Acme
+ */
+.ant-layout-sider .logo {
+  margin: 30px 0 10px;
+}
+.ant-layout-sider .logo img {
+  height: 40px;
+}
+.ant-layout-sider .logo,
+.ant-layout-sider .ant-layout-header .logo {
+  background: unset;
+  box-shadow: unset;
+}
+.ant-layout-sider .logo.menu-collapse {
+  width: 60px;
+}
+@media screen and (max-width: 992px) {
+  .bsw-operate.top {
+    margin-top: 0;
+  }
+  .bsw-body-login .login-box .left {
+    width: 0;
+  }
+  .bsw-body-login .login-box .right {
+    width: 360px;
+    height: 100%;
+    padding: 84px 16px;
+  }
+}
+.ant-layout .ant-layout-header {
+  background: unset;
+  z-index: 999;
+}
+span.ant-tag {
+  background: transparent;
+}
+.ant-layout-sider ul[role="menu"] > li[role="menuitem"] {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18) inset;
+}
+.ant-select-selection--multiple .ant-select-selection__rendered {
+  margin-left: 10px;
+}
+.bsw-ck {
+  border: 1px solid #e8edfa;
+}
+.bsw-ck .bsw-ck-toolbar {
+  box-shadow: 0 0 5px rgba(232, 237, 250, 0.2);
+  border-bottom: 1px solid #e8edfa;
+}
+.bsw-ck .ck.ck-toolbar .ck.ck-toolbar__separator {
+  background: #e8edfa;
+}
+.chats-filter {
+  margin: 8px 0 20px 0;
+  overflow: auto;
+}
+.chats-filter > div.bsw-operate.top {
+  float: left;
+  margin-bottom: 0;
+  padding: 0 0 8px 0;
+}
+.chats-filter > div.bsw-operate.top button {
+  margin: 0;
+}
+.chats-filter > form.bsw-filter-form {
+  float: right;
+  margin-bottom: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.chats-filter > form.bsw-filter-form .bsw-filter-item {
+  padding: 0 12px 0 0;
+}
+.chats-filter > form.bsw-filter-form .ant-form-item {
+  margin: 0 0 12px;
+}
+.ant-layout .ant-layout-content {
+  background: #fff;
+  padding: 24px;
+}
+.ant-layout .ant-layout-content .bsw-welcome {
+  border: 1px solid #e8edfa;
+}
+.ant-layout .ant-layout-content.iframe {
+  padding: 10px;
+}
+.ant-layout .ant-layout-content.iframe .bsw-content-persistence {
+  border: none;
+}
+.ant-layout .ant-layout-content.iframe .chats-filter {
+  margin-top: 20px;
+}
+div.ant-tabs .ant-tabs-bar {
+  border-bottom: 1px solid #e8edfa;
+}
+.bsw-scaffold-document .ant-layout .ant-layout-content {
+  margin: 0;
+  border: none;
+}
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+p {
+  margin: 0;
+}
+.ant-layout .ant-layout-content {
+  margin: 20px 30px;
+  border: 1px solid #e8edfa;
+}
+.ant-layout .ant-layout-content .bsw-content-persistence {
+  border: none;
+}
+@media screen and (max-width: 992px) {
+  .ant-layout .ant-layout-content {
+    margin: 0;
+    border: none;
+    padding: 12px;
+  }
+}
+.ant-layout,
+.ant-layout-footer {
+  background: #fbfbfb;
+}
+.ant-layout .ant-layout-header {
+  padding: 0 30px;
+}
+.ant-layout .ant-layout-header .user-wrapper.right {
+  margin-right: 0;
+}
+@media screen and (max-width: 992px) {
+  .ant-layout .ant-layout-header {
+    padding: 0 10px 0 0;
+  }
+}
+.mb3 {
+  margin-bottom: 30px;
+}
+.ant-input:focus {
+  box-shadow: none;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: 0 none;
+}
+.ant-card-body {
+  padding: 36px;
+}
+.ant-card {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.02);
+}
+.icon-12 {
+  font-size: 12px;
+}
+.ant-table-tbody > tr > td,
+.ant-table-bordered .ant-table-body > table,
+.ant-table-bordered .ant-table-fixed-left table,
+.ant-table-bordered .ant-table-fixed-right table,
+.ant-table-bordered .ant-table-header > table,
+.ant-table-bordered .ant-table-tbody > tr > td,
+.ant-table-bordered .ant-table-thead > tr > th {
+  border-color: #e8edfa;
+}
+.ant-layout .ant-layout-content .bsw-content {
+  overflow: hidden;
+}
+.home-content-class .ant-layout-content {
+  background: 0 none;
+  margin: 5px 50px 20px;
+}
+.ant-layout .ant-layout-header .user-wrapper.left {
+  padding: 20px 0;
+}
+.ant-breadcrumb {
+  font-size: 16px;
+}
+/*# sourceMappingURL=skin-terse.css.map */
