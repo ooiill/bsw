@@ -1,6 +1,6 @@
 #
 # See https://hub.docker.com/_/mysql/
-# See https://github.com/docker-library/mysql/blob/master/5.7/Dockerfile
+# See https://github.com/docker-library/mysql/blob/master/5.7/Dockerfile.debian
 #
 
 FROM mysql:5.7
