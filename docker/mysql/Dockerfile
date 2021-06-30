@@ -7,11 +7,6 @@ FROM mysql:5.7
 MAINTAINER LEZ
 
 #
-# Install
-#
-RUN apt-get update && apt-get install -y libaio numactl
-
-#
 # Copy script
 #
 COPY bootstrap.sh /usr/local/bin/bootstrap
