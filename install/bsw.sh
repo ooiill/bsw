@@ -212,7 +212,7 @@ if [[ "${mode}" == "create" ]]; then
         sed -i "s/bsw-host/${host}/g" ${item}
         sed -i "s/bsw-app/${app}/g" ${item}
         sed -i "s/bsw-type/${type}/g" ${item}
-        if [[ -n "${databaseDsn}" == "" ]]; then
+        if [ -n "${databaseDsn}" ]; then
             sed -i "s/root\:Mys9l\!7259\@mysql\:3306\/bsw-database/${databaseDsn}/g" ${item}
         else
             sed -i "s/bsw-database/${database}/g" ${item}
