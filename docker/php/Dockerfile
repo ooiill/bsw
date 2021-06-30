@@ -22,7 +22,7 @@ RUN usermod -u 1000 www-data
 #
 # Install software
 #
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
     git \
     python3 \
     python3-distutils \

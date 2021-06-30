@@ -9,7 +9,7 @@ MAINTAINER LEZ
 #
 # Install
 #
-RUN apt-get install -y libaio numactl
+RUN apt-get update && apt-get install -y libaio numactl
 
 #
 # Copy script
