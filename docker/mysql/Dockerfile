@@ -1,9 +1,9 @@
 #
 # See https://hub.docker.com/_/mysql/
-# See https://github.com/docker-library/mysql/blob/master/5.7/Dockerfile.debian
+# See https://github.com/docker-library/mysql/blob/master/8.0/Dockerfile.debian
 #
 
-FROM mysql:5.7
+FROM mysql:8.0
 MAINTAINER LEZ
 
 #
