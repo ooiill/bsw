@@ -292,35 +292,34 @@ if [ "${type}" != "api" -a "${npm}" == "yes" ]; then
     fi
 fi
 
-if [[ "${mode}" == "create" ]]; then
-
+if [[ "${dbHost}" == "mysql" ]]; then
     eval "${app}-sf-bin doctrine:database:create"
-    eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --project=${app}"
-    eval "bin.${app}-${type}"
-    eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
-    rm -rf .git
-
-    controller=(
-        "src/Controller/BackendCover/"
-        "src/Controller/AcmeBackendController.php"
-        "src/Controller/AcmeApiController.php"
-        "src/Controller/AcmeWebController.php"
-        "src/Controller/HomeBackendController.php"
-        "src/Controller/HomeWebController.php"
-        "src/Controller/MixedBackendController.php"
-        "src/Controller/MixedApiController.php"
-        "src/Controller/MixedWebController.php"
-        "src/Controller/SmsApiController.php"
-        "templates/home-web/"
-    )
-
-    for item in ${controller[*]};
-    do
-        if [[ `echo "${item}" | grep -i "${type}" | wc -l | awk '{print $1}'` == 0 ]]; then
-            rm -rf ${item}
-        fi
-    done
 fi
+eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --project=${app}"
+eval "bin.${app}-${type}"
+eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
+rm -rf .git
+
+controller=(
+    "src/Controller/BackendCover/"
+    "src/Controller/AcmeBackendController.php"
+    "src/Controller/AcmeApiController.php"
+    "src/Controller/AcmeWebController.php"
+    "src/Controller/HomeBackendController.php"
+    "src/Controller/HomeWebController.php"
+    "src/Controller/MixedBackendController.php"
+    "src/Controller/MixedApiController.php"
+    "src/Controller/MixedWebController.php"
+    "src/Controller/SmsApiController.php"
+    "templates/home-web/"
+)
+
+for item in ${controller[*]};
+do
+    if [[ `echo "${item}" | grep -i "${type}" | wc -l | awk '{print $1}'` == 0 ]]; then
+        rm -rf ${item}
+    fi
+done
 
 color 44 " You can access service as following " "\n\t"
 if [[ "${httpPort}" != "" ]]; then
