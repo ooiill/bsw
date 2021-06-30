@@ -45,12 +45,24 @@ do
             top="${2}"
             shift 2
             ;;
-        --database-dsn)
-            databaseDsn="${2}"
+        --db-user)
+            dbUser="${2}"
             shift 2
             ;;
-        --database)
-            database="${2}"
+        --db-pwd)
+            dbPwd="${2}"
+            shift 2
+            ;;
+        --db-host)
+            dbHost="${2}"
+            shift 2
+            ;;
+        --db-port)
+            dbPort="${2}"
+            shift 2
+            ;;
+        --db-name)
+            dbName="${2}"
             shift 2
             ;;
         --ir-admin-phone)
@@ -80,7 +92,10 @@ npm=${npm-yes}
 mode=${mode-create}
 www=${www-app}
 top=${top-com}
-databaseDsn=${databaseDsn-}
+dbUser=${dbUser-root}
+dbPwd=${dbPwd-MySQL@9527}
+dbHost=${dbHost-mysql}
+dbPort=${dbPort-3306}
 irAdminPhone=${irAdminPhone-17011223344}
 irAdminPwd=${irAdminPwd-bsw@2020#BSW}
 help=${help-no}
@@ -115,10 +130,13 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--npm"            "\t"  "\t\t\t[ ] 是否需要执行 npm install [default:yes]"
     color 32 "--install"        "\t"  "\t\t[-] 标记为 install 模式, 未携带该参数默认为 create 模式"
     color 32 "--www"            "\t"  "\t\t\t[ ] 三级域名名称 [default:app]" "" "\n"
-    color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称 [default:{args.app}]" "" "\n"
+    color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称，未设置则同 --app 参数" "" "\n"
     color 32 "--top"            "\t"  "\t\t\t[ ] 顶级域名名称 [default:com]" "" "\n"
-    color 32 "--database-dsn"   "\t"  "\t\t[ ] 数据库连接，优先级高于 --database 参数，格式如 root:123456@host:3306/game"
-    color 32 "--database"       "\t"  "\t\t[ ] 数据库名称 [default:{args.app}]"
+    color 32 "--db-user"        "\t"  "\t\t[ ] 数据库用户，未设置则根据 docker 配置自动"
+    color 32 "--db-pwd"         "\t"  "\t\t[ ] 数据库用户密码，未设置则根据 docker 配置自动"
+    color 32 "--db-host"        "\t"  "\t\t[ ] 数据库名称，未设置则根据 docker 配置自动"
+    color 32 "--db-port"        "\t"  "\t\t[ ] 数据库名称，未设置则根据 docker 配置自动"
+    color 32 "--db-name"        "\t"  "\t\t[ ] 数据库名称，未设置则根据 --app 参数自动生成"
     color 32 "--ir-admin-phone" "\t"  "\t[ ] 后台管理系统账号 [default:17011223344]" "" "\n\n"
     color 32 "--ir-admin-pwd"   "\t"  "\t\t[ ] 后台管理系统账号密码 [default:bsw@2020#BSW]" "" "\n"
     color 32 "-h|--help"        "\t"  "\t\t[-] 打印帮助菜单, * 表示必须, - 表示无值参数" "" "\n"
@@ -213,12 +231,11 @@ if [[ "${mode}" == "create" ]]; then
         sed -i "s/bsw-host/${host}/g" ${item}
         sed -i "s/bsw-app/${app}/g" ${item}
         sed -i "s/bsw-type/${type}/g" ${item}
-        if [ -n ${databaseDsn} ]; then
-            sed -i "s/root\:Mys9l\!7259\@mysql\:3306\/bsw-database/${databaseDsn}/g" ${item}
-        else
-            sed -i "s/bsw-database/${database}/g" ${item}
-        fi
-
+        sed -i "s/bsw-db-user/${dbUser}/g" ${item}
+        sed -i "s/bsw-db-pwd/${dbPwd}/g" ${item}
+        sed -i "s/bsw-db-host/${dbHost}/g" ${item}
+        sed -i "s/bsw-db-port/${dbPort}/g" ${item}
+        sed -i "s/bsw-db-name/${dbName}/g" ${item}
         color 37 "${item}" "\t" ""
 
         for p in 3306 6379 80 443;

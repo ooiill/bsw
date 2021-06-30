@@ -10,7 +10,7 @@ bsw-app-mysql:
         - ./mysql/logs:/var/log/mysql
         - /etc/localtime:/etc/localtime:ro
     environment:
-        - MYSQL_ROOT_PASSWORD=Mys9l!7259
+        - MYSQL_ROOT_PASSWORD=MySQL@9527
 
 bsw-app-redis:
     build: ./redis
