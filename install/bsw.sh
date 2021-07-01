@@ -102,13 +102,12 @@ help=${help-no}
 user=`whoami`
 
 if [[ "${host}" == "" ]]; then
-    host=${app}
+    host=${app//_/-}
 fi
 
-if [[ "${database}" == "" ]]; then
-    database=${app}
+if [[ "${dbName}" == "" ]]; then
+    dbName=${app//-/_}
 fi
-database=${database//-/_}
 
 function color()
 {
@@ -130,7 +129,7 @@ if [[ "${help}" == "yes" ]]; then
     color 32 "--npm"            "\t"  "\t\t\t[ ] 是否需要执行 npm install [default:yes]"
     color 32 "--install"        "\t"  "\t\t[-] 标记为 install 模式, 未携带该参数默认为 create 模式"
     color 32 "--www"            "\t"  "\t\t\t[ ] 三级域名名称 [default:app]" "" "\n"
-    color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称，未设置则同 --app 参数" "" "\n"
+    color 32 "--host"           "\t"  "\t\t\t[ ] 二级域名名称，未设置则根据 --app 参数自动生成" "" "\n"
     color 32 "--top"            "\t"  "\t\t\t[ ] 顶级域名名称 [default:com]" "" "\n"
     color 32 "--db-user"        "\t"  "\t\t[ ] 数据库用户，未设置则根据 docker 配置自动"
     color 32 "--db-pwd"         "\t"  "\t\t[ ] 数据库密码，未设置则根据 docker 配置自动"
@@ -301,7 +300,7 @@ eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-passwo
 rm -rf .git
 
 if [[ "${type}" == "backend" ]]; then
-    eval "bin.${app}-{$type} --acme=App\\Controller\\AcmeBackendController --scheme-reverse=* --comment-2-label=yes --comment-2-menu=yes"
+    eval "bin.${app}-${type} --acme=App\\Controller\\AcmeBackendController --scheme-reverse=* --comment-2-label=yes --comment-2-menu=yes"
 fi
 
 controller=(
