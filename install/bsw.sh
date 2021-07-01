@@ -94,6 +94,7 @@ www=${www-app}
 top=${top-com}
 dbUser=${dbUser-root}
 dbPwd=${dbPwd-MySQL&9527}
+dbPwd=$(printf '%q' "${dbPwd}")
 dbHost=${dbHost-mysql}
 dbPort=${dbPort-3306}
 irAdminPhone=${irAdminPhone-17011223344}
