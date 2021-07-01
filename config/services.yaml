@@ -1,8 +1,8 @@
 parameters:
     locale: cn
-    theme: !php/const Leon\BswBundle\Module\Entity\Abs::CSS_ANT_D_TALK
     skin: terse
     terse_cnf:
+        theme: !php/const Leon\BswBundle\Module\Entity\Abs::CSS_ANT_D_TALK
         login_container_class: null
     terse_configure:
         menuTheme: light
