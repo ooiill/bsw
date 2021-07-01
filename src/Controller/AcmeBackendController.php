@@ -97,14 +97,15 @@ class AcmeBackendController extends BswBackendController
      * @param object   $item
      * @param string   $table
      * @param array    $fields
+     * @param array    $args
      * @param stdClass $options
      *
      * @return stdClass
      */
-    public static function entityPreviewHint($item, string $table, array $fields, stdClass $options = null)
+    public static function entityPreviewHint($item, string $table, array $fields, array $args, stdClass $options = null)
     {
         $options = $options ?? new stdClass();
-        $options = parent::entityPreviewHint($item, $table, $fields, $options);
+        $options = parent::entityPreviewHint($item, $table, $fields, $args, $options);
 
         // todo
 
@@ -119,14 +120,20 @@ class AcmeBackendController extends BswBackendController
      * @param object   $item
      * @param string   $table
      * @param array    $fields
+     * @param array    $args
      * @param stdClass $options
      *
      * @return stdClass
      */
-    public static function entityPersistenceHint($item, string $table, array $fields, stdClass $options = null)
-    {
+    public static function entityPersistenceHint(
+        $item,
+        string $table,
+        array $fields,
+        array $args,
+        stdClass $options = null
+    ) {
         $options = $options ?? new stdClass();
-        $options = parent::entityPersistenceHint($item, $table, $fields, $options);
+        $options = parent::entityPersistenceHint($item, $table, $fields, $args, $options);
 
         // todo
 
@@ -141,14 +148,15 @@ class AcmeBackendController extends BswBackendController
      * @param object   $item
      * @param string   $table
      * @param array    $fields
+     * @param array    $args
      * @param stdClass $options
      *
      * @return stdClass
      */
-    public static function entityFilterHint($item, string $table, array $fields, stdClass $options = null)
+    public static function entityFilterHint($item, string $table, array $fields, array $args, stdClass $options = null)
     {
         $options = $options ?? new stdClass();
-        $options = parent::entityFilterHint($item, $table, $fields, $options);
+        $options = parent::entityFilterHint($item, $table, $fields, $args, $options);
 
         // todo
 

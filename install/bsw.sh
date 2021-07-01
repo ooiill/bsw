@@ -93,7 +93,7 @@ mode=${mode-create}
 www=${www-app}
 top=${top-com}
 dbUser=${dbUser-root}
-dbPwd=${dbPwd-MySQL@9527}
+dbPwd=${dbPwd-MySQL$9527}
 dbHost=${dbHost-mysql}
 dbPort=${dbPort-3306}
 irAdminPhone=${irAdminPhone-17011223344}
@@ -299,6 +299,10 @@ eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --p
 eval "bin.${app}-${type}"
 eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
 rm -rf .git
+
+if [[ "${type}" == "backend" ]]; then
+    eval "bin.${app}-{$type} --acme=App\\Controller\\AcmeBackendController --scheme-reverse=* --comment-2-label=yes --comment-2-menu=yes"
+fi
 
 controller=(
     "src/Controller/BackendCover/"

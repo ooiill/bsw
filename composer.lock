@@ -5061,16 +5061,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "2.0.17",
+            "version": "2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "2a6892f9b9d31dfb0151fe3fd54d7b2f09df2f6f"
+                "reference": "a968afeb582c849d9f0f287adbe3f9e1ec5d9ff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/2a6892f9b9d31dfb0151fe3fd54d7b2f09df2f6f",
-                "reference": "2a6892f9b9d31dfb0151fe3fd54d7b2f09df2f6f",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/a968afeb582c849d9f0f287adbe3f9e1ec5d9ff3",
+                "reference": "a968afeb582c849d9f0f287adbe3f9e1ec5d9ff3",
                 "shasum": ""
             },
             "require": {
@@ -5166,7 +5166,11 @@
                 "symfony",
                 "web"
             ],
-            "time": "2021-06-30T04:25:01+00:00"
+            "support": {
+                "issues": "https://github.com/ooiill/bsw-bundle/issues",
+                "source": "https://github.com/ooiill/bsw-bundle/tree/2.0.18"
+            },
+            "time": "2021-07-01T04:35:55+00:00"
         },
         {
             "name": "overtrue/socialite",
@@ -12772,5 +12776,5 @@
         "ext-zlib": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

@@ -21,7 +21,7 @@ bsw-app-mysql:
         - /etc/localtime:/etc/localtime:ro
     environment:
         # Password for root
-        - MYSQL_ROOT_PASSWORD=MySQL@9527
+        - MYSQL_ROOT_PASSWORD=MySQL$9527
 
 # database redis
 bsw-app-redis:
