@@ -22,7 +22,7 @@
         "doctrine/doctrine-migrations-bundle": "2.1.2",
         "doctrine/migrations": "2.2.1",
         "ocramius/proxy-manager": "2.3.1",
-        "ooiill/bsw-bundle": "^2.0",
+        "ooiill/bsw-bundle": "^2.1",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",
