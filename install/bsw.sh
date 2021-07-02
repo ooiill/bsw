@@ -201,6 +201,7 @@ if [[ ! -d "${app}" ]]; then
 fi
 
 cd ${app}
+rm -rf .git
 
 if [[ "${mode}" == "create" ]]; then
 
@@ -295,12 +296,10 @@ fi
 if [[ "${dbHost}" == "mysql" ]]; then
     eval "${app}-sf-bin doctrine:database:create"
 fi
-eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --project=${app}"
+eval "bin.${app}-bsw --scaffold-need=no --config-need=yes --document-need=no --app=${type} --project=${app}"
 eval "bin.${app}-${type}"
-eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
-rm -rf .git
-
 if [[ "${type}" == "backend" ]]; then
+    eval "${app}-sf-bin bsw:init-record --admin-phone=${irAdminPhone} --admin-password=${irAdminPwd}"
     eval "bin.${app}-${type} --acme=App\\Controller\\AcmeBackendController --scheme-reverse=* --comment-2-label=yes --comment-2-menu=yes"
 fi
 
