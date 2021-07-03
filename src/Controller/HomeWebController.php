@@ -46,6 +46,10 @@ class HomeWebController extends AcmeWebController
         // $this->seoDescription = 'Custom website description';
         // $this->seoKeywords = 'Custom website keyword';
 
-        return $this->show(['rhetoric' => date(Abs::FMT_FULL)]);
+        return $this->showPage(
+            [
+                'rhetoric' => date(Abs::FMT_FULL),
+            ]
+        );
     }
 }

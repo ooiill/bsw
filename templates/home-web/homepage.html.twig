@@ -2,6 +2,55 @@
 
 {% block container %}
   <div style="text-align: center; padding-top: 200px;">
-    <h2>The homepage.</h2>{{ rhetoric }}
+    <h2>The homepage.</h2>
+    {{ logic.rhetoric }}
+    <div class="operate" style="margin: 50px auto">
+      <a-button type="primary" @click="clickItShowModal">Show Modal</a-button>
+      <a-button @click="clickItShowDrawer">Show Drawer</a-button>
+      <a-button @click="clickItShowMessage">Show Message</a-button>
+    </div>
   </div>
+{% endblock %}
+
+{% block javascript %}
+bsw.configure({
+    data: {
+        options: {
+            title: '欢迎来到BSW',
+            content: "BSW基于AntD，与之完全一样，当然这里也在此基础上做了一些封装，不过你可以选择自己动手。<br><br><h1>这里是支持HTML格式的</h1>",
+            width: 768,
+            maskClosable: true,
+            centered: false,
+        }
+    },
+    method: {
+        clickItShowModal() {
+            bsw.showModal(Object.assign(this.options, {
+                footer: true,
+            }));
+        },
+        clickItShowDrawer() {
+            bsw.showDrawer(Object.assign(this.options, {
+                footer: true,
+                placement: 'right',
+                cancelShow: true,
+                okShow: true,
+            }));
+        },
+        clickItShowMessage() {
+            let classify = ['success', 'info', 'warning', 'error'];
+            let type = ['message', 'confirm', 'notification'];
+            bsw.showMessage({
+                classify: classify[bsw.rand(0, classify.length - 1)],
+                type: type[bsw.rand(0, type.length - 1)],
+                content: '提示风格和消息类型都是随机的，不信你可以在点击按钮一次~'
+            });
+        },
+    },
+    logic: {
+        thisIsCasualFn() {
+            console.log('Whatever the function, it will be automatically executed if below `logic`.')
+        }
+    }
+});
 {% endblock %}
