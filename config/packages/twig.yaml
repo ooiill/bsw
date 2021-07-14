@@ -1,5 +1,6 @@
 twig:
     paths:
+        - '%kernel.project_dir%/templates-terse'
         - '%kernel.project_dir%/templates'
         - '%kernel.project_dir%/vendor/ooiill/bsw-bundle/Resources/views'
     default_path: '%kernel.project_dir%/templates'
