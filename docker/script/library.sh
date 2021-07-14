@@ -75,7 +75,6 @@ function docker.rebuild-network-card()
     sudo iptables -t nat -F
     sudo ifconfig docker0 down
     sudo brctl delbr docker0
-    # sudo docker -d
     sudo service docker restart
 }
 EOF

@@ -4,7 +4,7 @@ bsw=${1}
 basic=$(cd `dirname $0`; pwd)
 
 if [ "${bsw}" == "" ]; then
-    bsw=$(cd ${basic}/../../../bsw-bundle/; pwd)
+    bsw=$(cd ${basic}/../../bsw-bundle/; pwd)
 fi
 
 if [ ! -d "${bsw}" ]; then
