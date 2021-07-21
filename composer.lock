@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7c6cda4c145c0af43578cde49d4c936",
+    "content-hash": "d0a963bdf915d47ea3abc715a9eaf2ea",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -5465,16 +5465,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "2.1.24",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "56e3e1dd99e1da3474936fe61973b08ab7a0e44f"
+                "reference": "1e2e5f78404e04b439620377c6317e293f126b3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/56e3e1dd99e1da3474936fe61973b08ab7a0e44f",
-                "reference": "56e3e1dd99e1da3474936fe61973b08ab7a0e44f",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/1e2e5f78404e04b439620377c6317e293f126b3b",
+                "reference": "1e2e5f78404e04b439620377c6317e293f126b3b",
                 "shasum": ""
             },
             "require": {
@@ -5572,9 +5572,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ooiill/bsw-bundle/issues",
-                "source": "https://github.com/ooiill/bsw-bundle/tree/2.1.24"
+                "source": "https://github.com/ooiill/bsw-bundle/tree/2.2.1"
             },
-            "time": "2021-07-21T02:10:09+00:00"
+            "time": "2021-07-21T03:59:58+00:00"
         },
         {
             "name": "overtrue/socialite",
