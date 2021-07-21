@@ -32,7 +32,7 @@ class MixedWebController extends AcmeWebController
     /**
      * Document bsw
      *
-     * @Route("/skills/{name}", name="app_skills_document", requirements={"name": "[a-zA-Z0-9\-\.]+"}, defaults={"name": "01.docker"})
+     * @Route("/md/{name}", name="app_md_document", requirements={"name": "[a-zA-Z0-9\-\.]+"}, defaults={"name": "01.docker"})
      *
      * @param string $name
      *
@@ -47,14 +47,20 @@ class MixedWebController extends AcmeWebController
 
         $this->appendSrcCssWithKey('markdown', Abs::CSS_MARKDOWN);
         $this->appendSrcCssWithKey('highlight', Abs::CSS_HIGHLIGHT);
-        $this->appendSrcCssWithKey('scroll', 'diy:scroll');
+        $this->appendSrcCssWithKey('fancy-box', Abs::CSS_FANCY_BOX);
+
         $this->appendSrcJsWithKey('highlight', Abs::JS_HIGHLIGHT);
+        $this->appendSrcJsWithKey('highlight-ln', Abs::JS_HIGHLIGHT_LN);
+        $this->appendSrcJsWithKey('fancy-box', Abs::JS_FANCY_BOX);
 
         $this->seoWithAppName = false;
         $markdown = $this->markdownDirectoryParse(
             $name,
-            $this->getPath('mixed/skills', false),
+            $this->getPath('mixed/markdown', false),
+            'light',
         );
+
+        $this->seoTitle = 'ooiill 技能知识点';
 
         // $this->cnf->font_symbol = null; // Not load iconfont.js
 
@@ -64,7 +70,7 @@ class MixedWebController extends AcmeWebController
                 'data' => ['data' => $markdown],
             ],
             [],
-            'layout/document.html'
+            'layout/document-layout.html'
         );
     }
 }
