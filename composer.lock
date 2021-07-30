@@ -5465,16 +5465,16 @@
         },
         {
             "name": "ooiill/bsw-bundle",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ooiill/bsw-bundle.git",
-                "reference": "cb298bfa2197754726a11c2af7c44c114ee2a0d5"
+                "reference": "d88f11ee988c55c36fe12bc03f73bb4ac3f50603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/cb298bfa2197754726a11c2af7c44c114ee2a0d5",
-                "reference": "cb298bfa2197754726a11c2af7c44c114ee2a0d5",
+                "url": "https://api.github.com/repos/ooiill/bsw-bundle/zipball/d88f11ee988c55c36fe12bc03f73bb4ac3f50603",
+                "reference": "d88f11ee988c55c36fe12bc03f73bb4ac3f50603",
                 "shasum": ""
             },
             "require": {
@@ -5572,9 +5572,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ooiill/bsw-bundle/issues",
-                "source": "https://github.com/ooiill/bsw-bundle/tree/2.2.2"
+                "source": "https://github.com/ooiill/bsw-bundle/tree/2.2.3"
             },
-            "time": "2021-07-30T05:51:28+00:00"
+            "time": "2021-07-30T10:19:45+00:00"
         },
         {
             "name": "overtrue/socialite",
