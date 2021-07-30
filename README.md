@@ -53,6 +53,4 @@
     systemctl restart docker
     ```
 
-- 文档地址
-
-[https://ooiill.cn](https://ooiill.cn)
+- 文档地址 [https://ooiill.cn](https://ooiill.cn)
