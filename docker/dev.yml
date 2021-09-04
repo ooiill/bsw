@@ -4,7 +4,8 @@
 
 # database mysql
 bsw-app-mysql:
-    build: ./mysql
+    #build: ./mysql
+    image: jtleon/mysql57:bsw
     privileged: true
     #restart: always
     ports:
@@ -36,7 +37,8 @@ bsw-app-redis:
 
 # php-fpm
 bsw-app-fpm:
-    build: ./php
+    #build: ./php
+    image: jtleon/php74:bsw
     privileged: true
     #restart: always
     volumes:
